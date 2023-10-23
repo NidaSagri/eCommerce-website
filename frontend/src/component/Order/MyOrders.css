@@ -1,0 +1,84 @@
+.myOrdersPage {
+  width: 100vw;
+  max-width: 100%;
+  padding: 0 7vmax;
+  box-sizing: border-box;
+  background-color: rgb(235, 235, 235);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+#myOrdersHeading {
+  text-align: center;
+  font: 400 1.2vmax "Roboto";
+  padding: 0.5vmax;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  background-color: rgb(44, 44, 44);
+}
+
+.myOrdersTable {
+  background-color: white;
+  overflow-x: scroll;
+}
+
+.myOrdersTable tr, .myOrdersTable tbody {
+  font: 300 1vmax "Roboto";
+  color: rgba(0, 0, 0, 0.678);
+  border: none;
+}
+
+.myOrdersTable a {
+  color: rgba(0, 0, 0, 0.527);
+  transition: all 0.5s;
+}
+
+.myOrdersTable a:hover {
+  color: tomato;
+}
+
+.columnHeader {
+  background-color: tomato;
+}
+
+.columnHeader tr {
+  color: rgb(255, 255, 255);
+  font: 300 1.1vmax "Roboto" ;
+}
+
+table{
+  border-collapse: collapse;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+  .myOrdersPage {
+    padding: 0 5px;
+    padding-top: 5px;
+    height: 93vh;
+  }
+
+  #myOrdersHeading {
+    font: 400 2.2vmax "Roboto";
+    padding: 4vw;
+    width: 100vw;
+  }
+
+  .myOrdersTable tr, .myOrdersTable tbody {
+    font: 300 4vw "Roboto";
+  }
+
+  .columnHeader {
+    padding: 20px ;
+  }
+
+  .columnHeader tr {
+    font: 300 4vw "Roboto" ;
+  }
+}
