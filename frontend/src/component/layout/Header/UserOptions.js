@@ -4,7 +4,6 @@ import { SpeedDial, SpeedDialAction } from "@material-ui/lab";
 import profilePic from "../../../../src/images/Profile.png";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
-
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import {useNavigate} from "react-router-dom";
@@ -39,6 +38,7 @@ const UserOptions = ({user}) => {
       ];
     
       if (user.role === "admin") {
+        //unshift is used to insert an element at the start of an array
         options.unshift({
           icon: <DashboardIcon />,
           name: "Dashboard",
@@ -51,16 +51,17 @@ const UserOptions = ({user}) => {
       }
     
       function orders() {
-        navigate("/orders");
+        navigate("/orders/me");
       }
       function account() {
-        navigate("/account");
+        navigate("/me");
       }
       function cart() {
         navigate("/cart");
       }
       function logoutUser() {
         dispatch(logout());
+        navigate("/products");
         alert.success("Logout Successfully");
       }
 

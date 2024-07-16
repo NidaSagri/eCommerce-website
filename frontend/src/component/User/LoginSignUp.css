@@ -87,7 +87,6 @@
   
   .loginForm > a {
     color: rgba(0, 0, 0, 0.651);
-    text-decoration: none;
     align-self: flex-end;
     transition: all 0.5s;
     font: 500 0.9vmax "Gill Sans";

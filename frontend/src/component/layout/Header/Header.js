@@ -48,6 +48,7 @@ const Header = () => {
       cartIconColor= "rgba(35, 35, 35,0.8)"
       cartIconColorHover= "#eb4034"
       cartIconMargin= "1vmax"
+      cartIconUrl= "/cart"
 
       profileIcon={true}
       ProfileIconElement= {MdAccountCircle}
@@ -59,6 +60,7 @@ const Header = () => {
       SearchIconElement={MdSearch}
       searchIconColor= "rgba(35, 35, 35,0.8)"
       searchIconColorHover= "#eb4034"
+      searchIconUrl= "/search"
     />
   );
 };

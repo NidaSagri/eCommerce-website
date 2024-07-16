@@ -46,8 +46,8 @@
     background-color: rgb(255, 233, 174);
     text-decoration: none;
     padding: 1.5rem;
-    width: 10vmax;
-    height: 10vmax;
+    width: 8vmax;
+    height: 8vmax;
     margin: 2rem;
     border-radius: 100%;
     display: flex;
@@ -67,13 +67,14 @@
   }
   
   .lineChart {
-    width: 80%;
+    width: 70%;
     margin: auto;
   }
   
   .doughnutChart {
     width: 30vmax;
     margin: auto;
+    margin-top: 6vmax;
   }
   
   @media screen and (max-width: 600px) {
@@ -84,7 +85,7 @@
     .dashboardContainer {
       border-left: none;
     }
-  
+    
     .dashboardSummary > div > p {
       margin: 0;
     }

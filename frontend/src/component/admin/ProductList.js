@@ -58,7 +58,8 @@ const ProductList = () => {
       <div className="dashboard">
         <SideBar />
         <div className="productListContainer">
-          <h1 id="productListHeading">ALL PRODUCTS</h1>
+          {products && products.length > 0? (<>
+            <h1 id="productListHeading">ALL PRODUCTS</h1>
 
           <table className="productListTable">
           
@@ -81,14 +82,15 @@ const ProductList = () => {
              <td>{item.name}</td>
              <td>{item.Stock}</td>
              <td>₹{item.price}</td>
-             <td>{<Link to={`/admin/product/${item._id}`}><EditIcon/></Link>} {<Button onClick={() =>
+             <td className="editIcon">{<Link to={`/admin/product/${item._id}`}><EditIcon/></Link>} {<Button onClick={() =>
                  deleteProductHandler(item._id)}><DeleteIcon/></Button>}</td>
-
-          </tr>
+            </tr>
             ) )}
           </tbody>
 
         </table>
+          </>):
+          ((<h1 className="productReviewsFormHeading" style={{marginTop:"4vmax"}}>No Products</h1>))}
         </div>
       </div>
     </Fragment>

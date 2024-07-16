@@ -14,7 +14,7 @@ exports.newOrder = async(req, res)=>{
 
 }
 
-//get single order
+//get single order/ get order details
 exports.getSingleOrder = async(req, res)=>{
     
     try {
@@ -106,9 +106,11 @@ exports.updateOrder = async(req, res)=>{
             })
           }
 
-         order.orderItems.forEach(async (o) =>{
-            updateStock(o.product, o.quantity)
-          })
+          if (req.body.status === "Shipped") {
+            order.orderItems.forEach(async (o) => {
+              await updateStock(o.product, o.quantity);
+            });
+          }
 
         order.orderStatus = req.body.status;
         

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useRef } from "react";
 import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -27,6 +27,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
   let {id} = useParams();
+  const cartBtn = useRef(null);
 
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
@@ -63,6 +64,11 @@ const ProductDetails = () => {
   };
 
   const addToCartHandler = () => {
+    if(cartBtn.current.disabled) {
+      alert("Item is currently out of stock.");
+      return;
+    }
+
     dispatch(addItemsToCart(id, quantity));
     alert.success("Item Added To Cart");
   };
@@ -98,6 +104,7 @@ const ProductDetails = () => {
       alert.success("Review Submitted Successfully");
       dispatch({ type: NEW_REVIEW_RESET });
     }
+
     dispatch(getProductDetails(id));
   }, [dispatch, id, error, alert, reviewError, success]);
 
@@ -107,7 +114,7 @@ const ProductDetails = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title={`${product.name} -- ECOMMERCE`} />
+          <MetaData title={`${product.name} -- NIDA STORE`} />
           <div className="ProductDetails">
             <div>
               <Carousel>
@@ -131,7 +138,6 @@ const ProductDetails = () => {
               <div className="detailsBlock-2">
                 <Rating {...options} />
                 <span className="detailsBlock-2-span">
-                  {" "}
                   ({product.numOfReviews} Reviews)
                 </span>
               </div>
@@ -143,7 +149,7 @@ const ProductDetails = () => {
                     <input readOnly type="number" value={quantity} />
                     <button onClick={increaseQuantity}>+</button>
                   </div>
-                  <button
+                  <button ref={cartBtn}
                     disabled={product.Stock < 1 ? true : false}
                     onClick={addToCartHandler}
                   >
@@ -152,9 +158,8 @@ const ProductDetails = () => {
                 </div>
 
                 <p>
-                  Status:
-                  <b className={product.Stock < 1 ? "redColor" : "greenColor"}>
-                    {product.Stock < 1 ? "OutOfStock" : "InStock"}
+                  Status: <b className={product.Stock < 1 ? "redColor" : "greenColor"}>
+                    {product.Stock < 1 ? "Out Of Stock" : "InStock"}
                   </b>
                 </p>
               </div>
@@ -170,6 +175,17 @@ const ProductDetails = () => {
           </div>
 
           <h3 className="reviewsHeading">REVIEWS</h3>
+
+          {product.reviews && product.reviews[0] ? (
+            <div className="reviews">
+              {product.reviews &&
+                product.reviews.map((review) => (
+                  <ReviewCard key={review._id} review={review} />
+                ))}
+            </div>
+          ) : (
+            <p className="noReviews">No Reviews Yet</p>
+          )}
 
           <Dialog
             aria-labelledby="simple-dialog-title"
@@ -202,16 +218,6 @@ const ProductDetails = () => {
             </DialogActions>
           </Dialog>
 
-          {product.reviews && product.reviews[0] ? (
-            <div className="reviews">
-              {product.reviews &&
-                product.reviews.map((review) => (
-                  <ReviewCard key={review._id} review={review} />
-                ))}
-            </div>
-          ) : (
-            <p className="noReviews">No Reviews Yet</p>
-          )}
         </Fragment>
       )}
     </Fragment>

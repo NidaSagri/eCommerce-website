@@ -35,7 +35,7 @@ const MyOrders = () => {
         <Loader />
       ) : (
         <div className="myOrdersPage">
-          
+        <Typography id="myOrdersHeading">{user.name}'s Orders</Typography> 
         <table className="myOrdersTable">
           
           <thead className="columnHeader">
@@ -63,9 +63,9 @@ const MyOrders = () => {
             ) )}
           </tbody>
 
-        </table>
+         </table>
 
-          <Typography id="myOrdersHeading">{user.name}'s Orders</Typography>
+          
         </div>
       )}
     </Fragment>

@@ -81,7 +81,6 @@ exports.getAdminProducts = async(req, res)=>{
     res.status(200).json({
         success:true,
         products,
-
         })
 }
 catch (error) {
@@ -101,7 +100,7 @@ catch (error) {
             return res.status(500).json({
                 success:false,
                 message:"Product not found"
-                })
+            })
         }
 
   // Images Start Here
@@ -308,7 +307,14 @@ exports.deleteReview = async(req, res)=>{
         avg += rev.rating 
     })
 
-    const ratings = avg / reviews.length;
+    let ratings = 0;
+
+  if (reviews.length === 0) {
+    ratings = 0;
+  } else {
+    ratings = avg / reviews.length;
+  }
+
     const numOfReviews = reviews.length;
 
     await Product.findByIdAndUpdate(req.query.productId, {

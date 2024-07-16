@@ -39,7 +39,7 @@ const LoginSignUp = () => {
     const [avatar, setAvatar] = useState(profilePic);
     const [avatarPreview, setAvatarPreview] = useState(profilePic);
 
-    const redirect = location.search? location.search.split("=")[1] : "/account";
+    const redirect = location.search? location.search.split("=")[1] : "/me";
 
   useEffect(() => {
     if (error) {
@@ -141,7 +141,7 @@ const LoginSignUp = () => {
                   onChange={(e) => setLoginPassword(e.target.value)}
                 />
               </div>
-              <Link to="/password/forgot">Forget Password ?</Link>
+              <Link to="/password/forgot">Forgot Password ?</Link>
               <input type="submit" value="Login" className="loginBtn" />
             </form>
 

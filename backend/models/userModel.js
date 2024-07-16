@@ -37,6 +37,7 @@ const userSchema = new mongoose.Schema({
         }
     },
 
+
     role:{
         type:String,
         default:"user"
@@ -54,11 +55,11 @@ const userSchema = new mongoose.Schema({
 //hashing password
 userSchema.pre("save", async function(next){
 
-    if(!this.isModified(this.password)){
-        next()
+    if(!this.isModified("password")){
+        next();
     }
     
-    this.password = bcrypt.hash(this.password,10)
+    this.password = await bcrypt.hash(this.password,10);
 });
 
 //JWT Token

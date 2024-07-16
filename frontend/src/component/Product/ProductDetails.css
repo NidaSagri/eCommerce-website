@@ -92,7 +92,7 @@
     color: white;
     transition: all 0.5s;
     background-color: tomato;
-    font: 500 0.7vmax "Roboto";
+    font: 500 0.8vmax "Roboto";
     border-radius: 20px;
     padding: 0.5vmax 2vmax;
     margin: 1vmax;
@@ -125,10 +125,11 @@
   .submitReview {
     border: none;
     background-color: tomato;
-    font: 500 0.7vmax "Roboto";
+    font: 500 0.8vmax "Roboto";
     border-radius: 20px;
     padding: 0.6vmax 2vmax;
     margin: 1vmax 0;
+    margin-bottom: -3vmax;
     color: white;
     cursor: pointer;
     transition: all 0.5s;
@@ -167,11 +168,10 @@
   }
   
   .reviewCard {
-    flex: none;
-  
+    flex: none;  
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
     border: 1px solid rgba(56, 56, 56, 0.116);
-    width: 30vmax;
+    width: 20vmax;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,7 +179,7 @@
     padding: 3vmax;
   }
   .reviewCard > img {
-    width: 5vmax;
+    width: 4vmax;
   }
   .reviewCard > p {
     color: rgba(0, 0, 0, 0.836);
@@ -207,20 +207,21 @@
     }
   
     .detailsBlock-1 > h2 {
-      font-size: 2.8vmax;
+      font-size: 3vmax;
       text-align: center;
     }
   
     .detailsBlock-1 > p {
       text-align: center;
-      font-size: 1vmax;
+      font-size: 1.5vmax;
+      margin-bottom: 2vmax;
     }
   
     .detailsBlock-2 {
       justify-content: center;
     }
     .detailsBlock-2 > span {
-      font-size: 1.5vmax;
+      font-size: 2.5vmax;
     }
   
     .detailsBlock-3 > h1 {
@@ -256,15 +257,17 @@
     .detailsBlock-3 > p {
       padding: 2.5vmax 0;
       text-align: center;
-      font: 400 2vmax "Roboto";
+      font: 400 2.5vmax "Roboto";
     }
   
     .detailsBlock-4 {
       font: 500 2.5vmax sans-serif;
+      margin-top: 2vmax;
+      text-align: center;
     }
   
     .detailsBlock-4 > p {
-      font: 300 1.8vmax sans-serif;
+      font: 300 2.5vmax sans-serif;
     }
   
     .submitReview {
@@ -273,11 +276,19 @@
       width: 20vmax;
       margin: 3vmax 0;
     }
+
+    .noReviews{
+      font-size: 3vmax;
+    }
+
+    .reviewsHeading{
+      font-size: 3vmax;
+    }
   
     .reviewCard > p {
-      font: 600 3vw "Roboto";
+      font: 600 2vmax "Roboto";
     }
     .reviewCardComment {
-      font: 300 5vw cursive;
+      font: 300 2vmax cursive;
     }
   }

@@ -43,7 +43,7 @@ const UpdatePassword = () => {
     if (isUpdated) {
       alert.success("Profile Updated Successfully");
 
-      navigate("/account");
+      navigate("/me");
 
       dispatch({
         type: UPDATE_PASSWORD_RESET,

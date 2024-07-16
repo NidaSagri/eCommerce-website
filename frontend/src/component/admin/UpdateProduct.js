@@ -201,7 +201,7 @@ const UpdateProduct = () => {
             <div id="createProductFormFile">
               <input
                 type="file"
-                name="avatar"
+                name="images"
                 accept="image/*"
                 onChange={updateProductImagesChange}
                 multiple
