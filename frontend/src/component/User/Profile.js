@@ -21,7 +21,7 @@ const Profile = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title={`${user.name}'s Profile | NIDA STORE`} />
+          <MetaData title={`${user.name}'s Profile | SHOPPY`} />
           <div className="profileContainer">
             <div>
               <h1>My Profile</h1>

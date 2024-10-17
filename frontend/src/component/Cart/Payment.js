@@ -3,7 +3,7 @@ import CheckoutSteps from "../Cart/CheckoutSteps";
 import { useSelector, useDispatch } from "react-redux";
 import {useNavigate} from "react-router-dom";
 import MetaData from "../layout/MetaData";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import { useAlert } from "react-alert";
 import {
   CardNumberElement,
@@ -118,7 +118,7 @@ const Payment = () => {
 
   return (
     <Fragment>
-      <MetaData title="Payment" />
+      <MetaData title="Payment | SHOPPY" />
       <CheckoutSteps activeStep={2} />
       <div className="paymentContainer">
         <form className="paymentForm" onSubmit={(e) => submitHandler(e)}>

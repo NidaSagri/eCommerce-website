@@ -77,7 +77,7 @@ const UpdateProfile = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Update Profile | NIDA STORE" />
+          <MetaData title="Update Profile | SHOPPY" />
           <div className="updateProfileContainer">
             <div className="updateProfileBox">
               <h2 className="updateProfileHeading">Update Profile</h2>

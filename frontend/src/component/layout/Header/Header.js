@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactNavbar } from "overlay-navbar";
-import logo from "../../../images/Logo1.png";
+import logo from "../../../images/logo3.png";
 import {AiOutlineShoppingCart} from "react-icons/ai";
 import {MdAccountCircle } from "react-icons/md";
 import {MdSearch } from "react-icons/md";

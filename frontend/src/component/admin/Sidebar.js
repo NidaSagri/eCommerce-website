@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import logo from "../../images/Logo1.png";
 import { Link } from "react-router-dom";
-import { TreeView, TreeItem } from "@material-ui/lab";
+import { TreeView, TreeItem } from "@mui/lab";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import AddIcon from '@mui/icons-material/Add';

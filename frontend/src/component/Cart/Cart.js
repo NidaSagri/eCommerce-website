@@ -3,7 +3,7 @@ import "./Cart.css";
 import CartItemCard from "./CartItemCard";
 import { useSelector, useDispatch } from "react-redux";
 import { addItemsToCart, removeItemsFromCart } from "../../actions/cartAction";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import { Link, useNavigate } from "react-router-dom";
 import MetaData from "../layout/MetaData";
@@ -40,7 +40,7 @@ const Cart = () => {
 
   return (
     <Fragment>
-    <MetaData title="My Cart | NIDA STORE" />
+    <MetaData title="My Cart | SHOPPY" />
     
       {cartItems.length === 0 ? (
         <div className="emptyCart">

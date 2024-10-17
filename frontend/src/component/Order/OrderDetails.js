@@ -3,7 +3,9 @@ import "./OrderDetails.css";
 import { useSelector, useDispatch } from "react-redux";
 import MetaData from "../layout/MetaData";
 import { Link,useParams } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+// import { Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+
 import { getOrderDetails, clearErrors } from "../../actions/orderAction";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";

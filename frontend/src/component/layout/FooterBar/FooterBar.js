@@ -1,7 +1,7 @@
 import React from 'react'
 import playStore from "../../../images/playstore.png"
 import appStore from "../../../images/Appstore.png"
-import logo from "../../../images/Logo1.png"
+import logo from "../../../images/logo3.png"
 import "./FooterBar.css"
 
 const FooterBar = () => {
@@ -16,10 +16,9 @@ const FooterBar = () => {
 
 
       <div className="midFooter">
-        {/* <h1>NIDA STORE</h1> */}
         <img src={logo} alt="logo" />
         <p>High Quality is our first priority</p>
-        <p>Copyrights 2023 &copy; Nida Sagri</p>
+        <p>Copyrights 2023 &copy; SHOPPY</p>
       </div>
 
 

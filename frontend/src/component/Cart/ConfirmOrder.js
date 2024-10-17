@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import MetaData from "../layout/MetaData";
 import "./ConfirmOrder.css";
 import { Link , useNavigate} from "react-router-dom";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 
 const ConfirmOrder = () => {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const ConfirmOrder = () => {
 
   return (
     <Fragment>
-      <MetaData title="Confirm Order | NIDA STORE" />
+      <MetaData title="Confirm Order | SHOPPY" />
       <CheckoutSteps activeStep={1} />
       <div className="confirmOrderPage">
         <div>

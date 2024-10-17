@@ -7,7 +7,7 @@ import {
 } from "../../actions/productAction";
 import { useNavigate , useParams} from "react-router-dom";
 import { useAlert } from "react-alert";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import MetaData from "../layout/MetaData";
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import DescriptionIcon from '@mui/icons-material/Description';
@@ -128,7 +128,7 @@ const UpdateProduct = () => {
 
   return (
     <Fragment>
-      <MetaData title=" Update Product" />
+      <MetaData title="Update Product" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">

@@ -18,8 +18,8 @@ import {
   DialogContent,
   DialogTitle,
   Button,
-} from "@material-ui/core";
-import { Rating } from "@material-ui/lab";
+} from "@mui/material";
+import { Rating } from "@mui/lab";
 import { NEW_REVIEW_RESET } from "../../constants/productConstants";
 import { useParams } from "react-router-dom";
 
@@ -114,7 +114,7 @@ const ProductDetails = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title={`${product.name} -- NIDA STORE`} />
+          <MetaData title={`${product.name} | SHOPPY`} />
           <div className="ProductDetails">
             <div>
               <Carousel>
